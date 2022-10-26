@@ -37,7 +37,9 @@ createApp({
     },
 
     methods: {
+        
         slideNext: function(){
+            console.log(slideNext);
             if(this.positionSlides < this.slides.lenght -1){
                 this.positionSlides++;
             }else{
