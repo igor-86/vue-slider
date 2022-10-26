@@ -56,12 +56,17 @@ createApp({
         slideClick: function(clicked){
             this.positionSlides = clicked;
         },
-        pluto: function(){
-            this.intervalSet = setInterval(this.slideNext, 3000);
+        slideAuto: function(){
+            this.intervalSet = setInterval(this.slideNext, 1000)
+        },
+        slideStop: function(){
+            clearInterval(this.intervalSet);
         }
+       
     },
     created (){
-        this.pluto();
+        this.slideAuto();
+        
     }
 
 

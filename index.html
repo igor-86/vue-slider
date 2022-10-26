@@ -17,7 +17,7 @@
         <div class="container" >
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item" v-for="(pippo, index) in slides" :class="positionSlides === index ? 'active': ''">
+                <div class="item" v-for="(pippo, index) in slides" :class="positionSlides === index ? 'active': ''"  @mouseover="slideStop"  @mouseleave="slideAuto">
                     <img :src="pippo.image" alt="" />
                     <div class="text">
                         <h3>{{pippo.title}}</h3>
