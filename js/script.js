@@ -30,8 +30,8 @@ createApp({
                     text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
                 }
             ],
-            positionSlides : 0
-            
+            positionSlides : 0,
+            intervalSet : ""
         }
         
     },
@@ -55,8 +55,15 @@ createApp({
         },
         slideClick: function(clicked){
             this.positionSlides = clicked;
+        },
+        pluto: function(){
+            this.intervalSet = setInterval(this.slideNext, 3000);
         }
+    },
+    created (){
+        this.pluto();
     }
+
 
 }).mount('#app');
 
