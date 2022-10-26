@@ -39,11 +39,18 @@ createApp({
     methods: {
         
         slideNext: function(){
-            console.log(slideNext);
-            if(this.positionSlides < this.slides.lenght -1){
+            console.log(this.positionSlides, this.slides.length);
+            if(this.positionSlides < this.slides.length -1){
                 this.positionSlides++;
             }else{
                 this.positionSlides = 0;
+            }
+        },
+        slidePrev:function(){
+            if(this.positionSlides > 0){
+                this.positionSlides--;
+            }else{
+                this.positionSlides = this.slides.length - 1;
             }
         }
     }
