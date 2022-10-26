@@ -52,6 +52,9 @@ createApp({
             }else{
                 this.positionSlides = this.slides.length - 1;
             }
+        },
+        slideClick: function(clicked){
+            this.positionSlides = clicked;
         }
     }
 

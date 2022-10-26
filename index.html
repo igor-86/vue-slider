@@ -30,7 +30,7 @@
                 <div class="thumbs">
                     <div class="prev" @click="slidePrev"></div>
                     <div class="next" @click="slideNext"></div>
-                    <div class="thumb"  v-for="(pluto,index) in slides" :class="positionSlides === index ? 'active': ''" >
+                    <div class="thumb"  v-for="(pluto,index) in slides" :class="positionSlides === index ? 'active': ''" @click="slideClick(index)">
                         <img :src="pluto.image" :alt="pluto.title"/>
                     </div>
                     
